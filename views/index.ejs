@@ -3,47 +3,406 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <link href="/fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito|Playfair+Display:700|Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400i,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="Images/icon.png" />
     <title>Short It</title>
+    <style>
+      th,
+      td {
+        border: 1px solid #675364 !important;
+      }
+      .form-control {
+        background-color: #ffffff !important;
+        border: 1px solid #675364 !important;
+        color: #675364 !important;
+      }
+      a {
+        color: #675364;
+      }
+      #shortener-div {
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+      }
+      #font-aweso {
+        /*            color: #9c47fc;*/
+
+        display: block;
+
+        background: -webkit-linear-gradient(-45deg, #0575e6, #021b79);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+      }
+
+      #font-aweso2 {
+        /*            color: #9c47fc;*/
+
+        display: block;
+
+        background: -webkit-linear-gradient(135deg, #d5135a, #f45c43);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+      }
+
+      #font-aweso3 {
+        /*            color: #9c47fc;*/
+
+        display: block;
+
+        background: -webkit-linear-gradient(135deg, #2a56ad, #0057ff);
+
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+      }
+
+      body {
+        font-family: "Nunito", sans-serif;
+        color: #383838;
+        font-size: 15px;
+        overflow-x: hidden;
+        line-height: 1.7em;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Roboto", serif;
+      }
+
+      #profile-picture {
+        padding-right: 100px;
+        margin-right: 10%;
+        width: 58%;
+      }
+
+      #profile-title {
+        position: relative;
+        z-index: 1;
+        text-align: right;
+      }
+      #nav {
+        background: #fff;
+      }
+      #profile-subtitle {
+        position: relative;
+        z-index: 1;
+        text-align: right;
+      }
+
+      #about-title {
+        padding-bottom: 30px;
+        color: #383838;
+      }
+
+      #about-text {
+        list-style: 1.9em;
+        font-size: 18px;
+        padding: 0px 275px 0px 275px;
+      }
+
+      #work-title {
+        color: #383838;
+      }
+
+      #work {
+        padding-top: 60px;
+      }
+
+      #work-date {
+        font-size: 15px;
+        margin: 0px;
+        color: #e38b79;
+      }
+
+      #work-1 {
+        padding-left: 300px;
+        padding-right: 300px;
+      }
+
+      #form {
+        padding-right: 50px;
+      }
+
+      .form-group {
+        border: 2px solid #383838;
+      }
+
+      #profile-2 {
+        width: 40%;
+      }
+
+      #footer {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+
+      li {
+        display: inline-block;
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+
+      #skills {
+        font-size: 32px;
+        line-height: 70px;
+      }
+
+      @media screen and (max-width: 1024px) {
+        #profile-picture {
+          display: block;
+          width: 55%;
+          padding-right: 0px;
+        }
+
+        #about-text {
+          list-style: 1.9em;
+          font-size: 15px;
+          padding: 0px 75px 0px 75px;
+        }
+
+        #work-1 {
+          padding-left: 95px;
+          padding-right: 95px;
+        }
+
+        #profile-2 {
+          width: 58%;
+        }
+
+        #footer {
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        #profile-picture {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 60%;
+          padding-right: 0px;
+        }
+
+        #profile-title {
+          text-align: center;
+          font-size: 75px;
+        }
+
+        #profile-subtitle {
+          text-align: center;
+        }
+
+        #about-text {
+          list-style: 1.9em;
+          font-size: 15px;
+          padding: 0px 75px 0px 75px;
+        }
+
+        #work-1 {
+          padding-left: 95px;
+          padding-right: 95px;
+        }
+
+        #footer {
+          padding-left: 100px;
+          padding-right: 100px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        #about-text {
+          list-style: 1.9em;
+          font-size: 15px;
+          padding: 0px 20px;
+        }
+
+        #about {
+          padding-right: 22.5px;
+          padding-left: 22.5px;
+        }
+
+        #work-1 {
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+
+        #skills {
+          font-size: 18px;
+          line-height: 40px;
+        }
+
+        #profile-2 {
+          width: 70%;
+        }
+
+        #form {
+          padding-right: 20px;
+        }
+
+        #footer {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Link Shortener</h1>
-      <form action="api/url/shorten" method="post" class="my-4 form-inline">
-        <label for="fullUrl" class="sr-only">URL</label>
-        <input
-          type="url"
-          required
-          placeholder="Url"
-          name="fullUrl"
-          id="fullUrl"
-          class="form-control mr-2 col"
-        />
-        <button type="submit" class="btn btn-success">Shorten</button>
-      </form>
-      <table class="table table-striped table-responsive">
-        <thead>
-          <th>Full URL</th>
-          <th>Short URL</th>
-        </thead>
-        <tbody>
-          <% shortUrls.forEach(shortUrl =>{ %>
-          <tr>
-            <td>
-              <a href="<%= shortUrl.longUrl %>"><%= shortUrl.longUrl %></a>
-            </td>
-            <td>
-              <a href="<%= shortUrl.shortUrl%>"><%= shortUrl.shortUrl%></a>
-            </td>
-          </tr>
-          <% }) %>
-        </tbody>
-      </table>
+    <div
+      class="container-fluid px-5 py-5"
+      style="font-family: 'Nunito', sans-serif; background-color: #ffbb6b;"
+      id="shortener-div"
+    >
+      <div class="col">
+        <h1
+          class="pt-5 display-4"
+          style="font-family: 'Montserrat', sans-serif;"
+        >
+          Link Shortener
+        </h1>
+        <form action="api/url/shorten" method="post" class="my-4 form-inline">
+          <label for="fullUrl" class="sr-only">URL</label>
+          <input
+            type="url"
+            required
+            placeholder="Please enter the url"
+            name="fullUrl"
+            id="fullUrl"
+            class="form-control mr-2 col"
+          />
+          <button
+            type="submit"
+            class="btn"
+            style="background-color: #675364; color: #ffffff;"
+          >
+            Shorten
+          </button>
+        </form>
+        <table class="table my-5">
+          <thead>
+            <th>Full URL</th>
+            <th>Short URL</th>
+          </thead>
+          <tbody>
+            <% shortUrls.forEach(shortUrl =>{ %>
+            <tr>
+              <td>
+                <a href="<%= shortUrl.longUrl %>"><%= shortUrl.longUrl %></a>
+              </td>
+              <td>
+                <a href="<%= shortUrl.shortUrl%>"><%= shortUrl.shortUrl%></a>
+              </td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
     </div>
+
+    <footer class="container-fluid bg-light px-5 py-5 mt-0">
+      <div class="row justify-content-lg-center" id="parallax">
+        <div class="col-lg-6 px-0">
+          <p class="text-center display-4" style="color: #383838;">
+            <b>Hello!</b> <span class="text-muted">Let's Connect</span>
+          </p>
+          <img
+            src="https://aryaman.one/Images/profile-2.jpg"
+            alt="profile-2"
+            class="mx-auto d-block pb-1 rounded-circle"
+            id="profile-2"
+            style="max-width: 300px;"
+          />
+          <ul class="text-center pt-4 pl-0" style="font-size: 25px;">
+            <li>
+              <a
+                href="https://www.facebook.com/thearyamanchandra"
+                target="_blank"
+                ><i class="fab fa-facebook-f" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.behance.net/aryamanchandra" target="_blank"
+                ><i class="fab fa-behance" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/aryamanchandra" target="_blank"
+                ><i class="fab fa-dribbble" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/aryamanchandra" target="_blank"
+                ><i class="fab fa-github" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://medium.com/@aryamanchandra" target="_blank"
+                ><i class="fab fa-medium-m" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCoGX05bLREPTR2s9VTHEbNw"
+                target="_blank"
+                ><i
+                  class="fab fa-youtube"
+                  aria-hidden="true"
+                  style="color: #6a6a6a;"
+                ></i
+              ></a>
+            </li>
+
+            <li>
+              <a href="https://vimeo.com/aryamanchandra" target="_blank"
+                ><i class="fab fa-vimeo-v" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.artstation.com/aryamanchandra"
+                target="_blank"
+                ><i class="fab fa-artstation" style="color: #6a6a6a;"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

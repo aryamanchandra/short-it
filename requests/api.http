@@ -2,5 +2,5 @@ POST http://localhost:5000/api/url/shorten
 Content-Type: application/json
 
 {
-  "longUrl": "https://www.google.com/search?q=connecting+mongodb+atlas+with+node+js+2020&sxsrf=ALeKk03Ckq-wqgb2yl1I2IFTQcacD1xSdw:1596904693474&source=lnms&tbm=vid&sa=X&ved=2ahUKEwjll_rHhYzrAhWyzzgGHTxoBEwQ_AUoAXoECA4QAw&biw=1366&bih=625"
+  "longUrl": ""
 }
